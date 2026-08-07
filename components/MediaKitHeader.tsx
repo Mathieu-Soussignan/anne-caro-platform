@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Download, Send, ShieldCheck } from 'lucide-react';
+import { Download, Send, ShieldCheck, Globe } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const MediaKitHeader: React.FC = () => {
@@ -35,8 +35,18 @@ export const MediaKitHeader: React.FC = () => {
               <span>{MEDIA_KIT_DATA.name}</span>
               <ShieldCheck className="w-4 h-4 text-[#10B981]" />
             </div>
-            <div className="text-[10px] sm:text-xs font-mono text-[#9DA4B0]">
-              Media Kit Officiel • {MEDIA_KIT_DATA.handle}
+            <div className="text-[10px] sm:text-xs font-mono text-[#9DA4B0] flex items-center gap-2">
+              <span>Media Kit • {MEDIA_KIT_DATA.handle}</span>
+              <span className="hidden md:inline">•</span>
+              <a
+                href={MEDIA_KIT_DATA.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center gap-1 text-[#F0E5D8] hover:underline font-bold"
+              >
+                <Globe className="w-3 h-3 text-[#10B981]" />
+                <span>{MEDIA_KIT_DATA.websiteLabel}</span>
+              </a>
             </div>
           </div>
         </div>
@@ -44,6 +54,17 @@ export const MediaKitHeader: React.FC = () => {
         {/* Action CTAs */}
         <div className="flex items-center gap-2 sm:gap-3">
           
+          {/* Link to Official Site annecaroaction.fr */}
+          <a
+            href={MEDIA_KIT_DATA.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary text-xs py-2 px-3 sm:px-4 hidden lg:inline-flex items-center gap-1.5 shadow-sm"
+          >
+            <Globe className="w-3.5 h-3.5 text-[#10B981]" />
+            <span>Site Officiel</span>
+          </a>
+
           {/* PDF Download Button */}
           <button
             onClick={handleDownloadPDF}

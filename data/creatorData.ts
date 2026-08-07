@@ -26,6 +26,8 @@ export const MEDIA_KIT_DATA = {
   name: "Anne-Caro",
   handle: "@annecaroaction",
   secondaryHandle: "@annecaroinlife",
+  website: "https://www.annecaroaction.fr",
+  websiteLabel: "annecaroaction.fr",
   title: "Créatrice de Contenu Humour & Parodies du Quotidien",
   subTitle: "La référence francophone des sketchs de bureau, réunions RH et quiproquos du quotidien.",
   tagline: "Des situations du quotidien... parfois gênantes, parfois vraies. T'aurais réagi comment ?",
