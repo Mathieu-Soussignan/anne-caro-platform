@@ -2,23 +2,23 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, PieChart, MapPin, Sparkles, Heart } from 'lucide-react';
+import { Users, PieChart, MapPin } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const AudienceSection: React.FC = () => {
   return (
-    <section id="audience" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+    <section id="audience" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+      {/* Header without AI emojis */}
+      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
           <PieChart className="w-4 h-4 text-[#F0E5D8]" />
           <span>Démographie & Audience Cible</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
-          Profil des Abonnés 👥
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
+          Profil des Abonnés
         </h2>
-        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed max-w-2xl mx-auto font-normal">
           Une communauté urbaine, active, connectée et ultra-réceptive aux recommandations du quotidien.
         </p>
       </div>
@@ -26,7 +26,7 @@ export const AudienceSection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
         {/* Left Card: Gender & Age Split */}
-        <div className="lg:col-span-6 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6">
+        <div className="lg:col-span-6 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6 max-w-full">
           
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <h3 className="font-serif font-bold text-xl text-white flex items-center gap-2">
@@ -74,7 +74,7 @@ export const AudienceSection: React.FC = () => {
         </div>
 
         {/* Right Card: Geographical Distribution */}
-        <div className="lg:col-span-6 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6">
+        <div className="lg:col-span-6 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6 max-w-full">
           
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <h3 className="font-serif font-bold text-xl text-white flex items-center gap-2">

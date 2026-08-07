@@ -7,18 +7,18 @@ import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const CertifiedMetricsCockpit: React.FC = () => {
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+      {/* Header without AI emojis */}
+      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
           <ShieldCheck className="w-4 h-4 text-[#10B981]" />
           <span>Données Certifiées TikTok Creator Marketplace</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
-          Performance & Métriques Clés 📈
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
+          Performance & Métriques Clés
         </h2>
-        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed font-normal max-w-2xl mx-auto">
           Une audience captivée, 100% organique, avec des taux d'engagement et de complétion nettement supérieurs à la moyenne du marché.
         </p>
       </div>
@@ -29,7 +29,7 @@ export const CertifiedMetricsCockpit: React.FC = () => {
         {/* Followers */}
         <motion.div
           whileHover={{ y: -4 }}
-          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group"
+          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group max-w-full"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-2xl bg-[#181A1D] border border-white/10 flex items-center justify-center text-[#F0E5D8]">
@@ -50,7 +50,7 @@ export const CertifiedMetricsCockpit: React.FC = () => {
         {/* Total Views */}
         <motion.div
           whileHover={{ y: -4 }}
-          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group"
+          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group max-w-full"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-2xl bg-[#181A1D] border border-white/10 flex items-center justify-center text-[#F0E5D8]">
@@ -71,7 +71,7 @@ export const CertifiedMetricsCockpit: React.FC = () => {
         {/* Engagement Rate */}
         <motion.div
           whileHover={{ y: -4 }}
-          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group"
+          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group max-w-full"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-2xl bg-[#181A1D] border border-white/10 flex items-center justify-center text-[#F0E5D8]">
@@ -92,7 +92,7 @@ export const CertifiedMetricsCockpit: React.FC = () => {
         {/* Avg Views per Video */}
         <motion.div
           whileHover={{ y: -4 }}
-          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group"
+          className="bg-[#23272C] p-6 sm:p-8 rounded-3xl border border-[#F0E5D8]/15 shadow-xl relative overflow-hidden group max-w-full"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-2xl bg-[#181A1D] border border-white/10 flex items-center justify-center text-[#F0E5D8]">
@@ -113,7 +113,7 @@ export const CertifiedMetricsCockpit: React.FC = () => {
       </div>
 
       {/* Additional Certified Indicators */}
-      <div className="bg-[#181A1D] rounded-3xl p-6 sm:p-8 border border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div className="bg-[#181A1D] rounded-3xl p-6 sm:p-8 border border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-full">
         
         <div className="flex flex-col items-center gap-1.5 p-3">
           <div className="flex items-center gap-2 text-sm font-bold text-[#F0E5D8]">

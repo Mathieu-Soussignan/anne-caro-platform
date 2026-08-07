@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Send, Mail, MapPin, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
+import { Send, Mail, MapPin, ShieldCheck } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 interface ContactSectionProps {
@@ -32,26 +32,26 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+      {/* Header without AI emojis */}
+      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
           <Mail className="w-4 h-4 text-[#F0E5D8]" />
           <span>Partenariats & Contact Marque</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
-          Lancer une Campagne 🚀
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
+          Lancer une Campagne
         </h2>
-        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed max-w-2xl mx-auto font-normal">
           Discutons de votre projet. Notre équipe étudie chaque opportunité et vous recontacte sous 24h avec un concept sur-mesure.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
         {/* Left Column: Direct Contact Info Card */}
-        <div className="lg:col-span-5 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6">
+        <div className="lg:col-span-5 bg-[#23272C] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/15 shadow-xl space-y-6 max-w-full">
           
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#F0E5D8] p-0.5 bg-[#181A1D] shrink-0">
@@ -78,17 +78,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
 
           <div className="space-y-4 text-xs font-mono">
             <div className="bg-[#181A1D] p-4 rounded-2xl border border-white/10 flex items-center gap-3">
-              <Mail className="w-4 h-4 text-[#F0E5D8]" />
-              <div>
+              <Mail className="w-4 h-4 text-[#F0E5D8] shrink-0" />
+              <div className="overflow-hidden">
                 <div className="text-[#9DA4B0] text-[10px] uppercase font-bold">Email Direct :</div>
-                <a href={`mailto:${MEDIA_KIT_DATA.email}`} className="text-white font-bold hover:underline">
+                <a href={`mailto:${MEDIA_KIT_DATA.email}`} className="text-white font-bold hover:underline truncate block">
                   {MEDIA_KIT_DATA.email}
                 </a>
               </div>
             </div>
 
             <div className="bg-[#181A1D] p-4 rounded-2xl border border-white/10 flex items-center gap-3">
-              <MapPin className="w-4 h-4 text-[#F0E5D8]" />
+              <MapPin className="w-4 h-4 text-[#F0E5D8] shrink-0" />
               <div>
                 <div className="text-[#9DA4B0] text-[10px] uppercase font-bold">Localisation & Rayonnement :</div>
                 <div className="text-white font-bold">{MEDIA_KIT_DATA.location}</div>
@@ -99,7 +99,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
         </div>
 
         {/* Right Column: Brand Inquiry Terminal Form */}
-        <div className="lg:col-span-7 bg-[#23272C] rounded-3xl p-6 sm:p-10 border border-[#F0E5D8]/20 shadow-2xl">
+        <div className="lg:col-span-7 bg-[#23272C] rounded-3xl p-6 sm:p-10 border border-[#F0E5D8]/20 shadow-2xl max-w-full">
           
           <form onSubmit={handleSubmit} className="space-y-6">
             

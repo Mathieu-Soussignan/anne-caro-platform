@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Sparkles, Video, Crown, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Check, Video, ShieldCheck, ArrowRight } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const ServicesSection: React.FC = () => {
@@ -14,18 +14,18 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+    <section id="services" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+      {/* Header without AI emojis */}
+      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
           <Video className="w-4 h-4 text-[#F0E5D8]" />
           <span>Formats & Tarifs Partenariats</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
-          Offres de Collaboration 🤝
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
+          Offres de Collaboration
         </h2>
-        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed max-w-2xl mx-auto font-normal">
           Des formules adaptées aux objectifs de votre marque : de la notoriété immédiate à l'engagement long terme.
         </p>
       </div>
@@ -36,7 +36,7 @@ export const ServicesSection: React.FC = () => {
           <motion.div
             key={service.id}
             whileHover={{ y: -6 }}
-            className={`rounded-3xl p-8 sm:p-10 border transition-all flex flex-col justify-between relative shadow-2xl ${
+            className={`rounded-3xl p-6 sm:p-10 border transition-all flex flex-col justify-between relative shadow-2xl max-w-full ${
               service.popular
                 ? 'bg-[#23272C] border-[#F0E5D8] ring-1 ring-[#F0E5D8]/40'
                 : 'bg-[#181A1D] border-white/15'
@@ -101,9 +101,9 @@ export const ServicesSection: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-12 text-center text-xs text-[#9DA4B0] flex items-center justify-center gap-2">
-        <ShieldCheck className="w-4 h-4 text-[#10B981]" />
-        <span>Toutes nos collaborations sont encadrées par contrat professionnel et respectent scrupuleusement la loi ARPP.</span>
+      <div className="mt-12 text-center text-xs text-[#9DA4B0] flex items-center justify-center gap-2 px-2 max-w-full">
+        <ShieldCheck className="w-4 h-4 text-[#10B981] shrink-0" />
+        <span className="break-words">Toutes nos collaborations sont encadrées par contrat professionnel et respectent scrupuleusement la loi ARPP.</span>
       </div>
 
     </section>

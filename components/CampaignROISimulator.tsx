@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Sparkles, Send, Eye, Users, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Calculator, Sparkles, Send, Eye, Users, TrendingUp } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 interface SimulatorFormat {
@@ -61,25 +61,25 @@ export const CampaignROISimulator: React.FC = () => {
   };
 
   return (
-    <section id="simulator" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+    <section id="simulator" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+      {/* Header without AI emojis */}
+      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-2">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
           <Calculator className="w-4 h-4 text-[#F0E5D8]" />
           <span>Calculateur de Portée & ROI de Campagne</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
-          Simulateur de Performances Marque 🧮
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
+          Simulateur de Performances Marque
         </h2>
-        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed max-w-2xl mx-auto font-normal">
           Estimez en temps réel le volume de vues, la portée qualifiée et le budget prévisionnel pour votre prochaine campagne avec Anne-Caro.
         </p>
       </div>
 
       {/* Simulator Interactive Terminal */}
-      <div className="bg-[#23272C] rounded-3xl border border-[#F0E5D8]/20 p-6 sm:p-12 shadow-2xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="bg-[#23272C] rounded-3xl border border-[#F0E5D8]/20 p-6 sm:p-12 shadow-2xl max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Column: Format & Multiplier Selection */}
           <div className="lg:col-span-7 space-y-8">
