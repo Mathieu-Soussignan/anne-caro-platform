@@ -1,122 +1,128 @@
 export interface Product {
   id: string;
   title: string;
-  category: "🔥 Les Incontournables" | "💄 Beauté & Routine" | "🏠 Maison & Organisation" | "🎁 Bons Plans";
-  brand: string;
-  imageUrl: string;
+  category: string;
   recommendation: string;
+  quote?: string;
   originalPrice?: string;
   discountedPrice?: string;
-  promoCode?: string;
+  price?: string;
   discountPercentage?: string;
-  verified: boolean;
+  promoCode?: string;
   affiliateUrl: string;
+  affiliateLink?: string;
+  imageUrl: string;
+  brand: string;
   rating: number;
   reviewsCount: number;
-  badgeText?: string;
+  featured?: boolean;
+  badge?: string;
 }
 
 export const PRODUCTS_DATA: Product[] = [
   {
-    id: "serum-glow-eclat",
-    title: "Sérum Éclat Intense & Anti-Taches Peau Neuve",
-    category: "💄 Beauté & Routine",
-    brand: "Lumière Botanique",
-    imageUrl: "/images/serum.jpg",
-    recommendation: "Mon indispensable absolu du matin ! Il donne un glow incroyable dès la première application sans effet gras.",
-    originalPrice: "49,90 €",
-    discountedPrice: "34,90 €",
-    promoCode: "ANNECA20",
-    discountPercentage: "-30%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.9,
+    id: "micro-karaoke",
+    title: "Micro Karaoké Sans Fil Shinepick",
+    category: "Incontournables",
+    brand: "Shinepick",
+    rating: 4.8,
     reviewsCount: 1420,
-    badgeText: "Best-seller Routine"
+    recommendation: "Le fameux micro pour chanter, rigoler et mettre l'ambiance !",
+    quote: "Le fameux micro pour chanter, rigoler et mettre l'ambiance !",
+    originalPrice: "29,99 €",
+    discountedPrice: "24,99 €",
+    price: "24,99 €",
+    discountPercentage: "-17%",
+    affiliateUrl: "https://amzn.to/4wei2kk",
+    affiliateLink: "https://amzn.to/4wei2kk",
+    imageUrl: "/images/amazon_partner/micro.jpg",
+    featured: true,
+    badge: "🔥 Top Ventes"
   },
   {
-    id: "lampe-champignon-oak",
-    title: "Lampe Tactile d'Ambiance Sculpturale en Céramique",
-    category: "🏠 Maison & Organisation",
-    brand: "Maison Mura",
-    imageUrl: "/images/lamp.jpg",
-    recommendation: "Vous me la demandez à chaque vidéo TikTok ! Une lumière douce parfait pour créer une ambiance cocooning le soir.",
-    originalPrice: "79,00 €",
-    discountedPrice: "59,00 €",
-    promoCode: "ANNECOZY",
+    id: "mug-favori",
+    title: "Mug Design & Chill",
+    category: "Maison & Déco",
+    brand: "Oasis Home",
+    rating: 4.9,
+    reviewsCount: 890,
+    recommendation: "Mon mug chouchou pour le café ou le thé de la journée ☕",
+    quote: "Mon mug chouchou pour le café ou le thé de la journée ☕",
+    originalPrice: "19,99 €",
+    discountedPrice: "14,99 €",
+    price: "14,99 €",
     discountPercentage: "-25%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.95,
-    reviewsCount: 860,
-    badgeText: "Vu sur TikTok 🔥"
+    affiliateUrl: "https://amzn.to/4hgXTWZ",
+    affiliateLink: "https://amzn.to/4hgXTWZ",
+    imageUrl: "/images/amazon_partner/mug.jpg",
+    featured: true,
+    badge: "🤍 Coup de Cœur"
   },
   {
-    id: "sac-vanity-voyage",
-    title: "Trousse / Vanity de Voyage Compartimenté Nude",
-    category: "🏠 Maison & Organisation",
-    brand: "Nomade Chic",
-    imageUrl: "/images/bag.jpg",
-    recommendation: "L'organisateur rêvé. Il contient toute ma routine beauté sans rien écraser. Cuir végan ultra robuste !",
-    originalPrice: "42,00 €",
-    discountedPrice: "29,90 €",
-    promoCode: "ANNETRAVEL",
-    discountPercentage: "-28%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.88,
-    reviewsCount: 630,
-    badgeText: "Organisation Top"
+    id: "carnet-smarpau-a5",
+    title: "Carnet de Note Format A5 - Smarpau",
+    category: "Organisation & Papeterie",
+    brand: "Smarpau",
+    rating: 4.7,
+    reviewsCount: 650,
+    recommendation: "Incontournable pour poser ses idées, sa To-Do list et s'organiser.",
+    quote: "Incontournable pour poser ses idées, sa To-Do list et s'organiser.",
+    originalPrice: "15,99 €",
+    discountedPrice: "12,99 €",
+    price: "12,99 €",
+    affiliateUrl: "https://amzn.to/4bvspc0",
+    affiliateLink: "https://amzn.to/4bvspc0",
+    imageUrl: "/images/amazon_partner/carnet_a5.jpg",
+    badge: "✨ Pépite Organisation"
   },
   {
-    id: "baume-cleansing-silk",
-    title: "Baume Démaquillant Fondant à l'Huile de Camélia",
-    category: "💄 Beauté & Routine",
-    brand: "Aura Skincare",
-    imageUrl: "/images/serum.jpg",
-    recommendation: "Fait disparaître le maquillage même waterproof en 30 secondes chrono sans piquer les yeux. Un pur bonheur.",
-    originalPrice: "32,00 €",
-    discountedPrice: "24,00 €",
-    promoCode: "ANNECLEAN",
-    discountPercentage: "-25%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.92,
-    reviewsCount: 950,
-    badgeText: "Coup de Cœur"
+    id: "stylos-kawaii",
+    title: "Lot de Stylos Kawaii",
+    category: "Organisation & Papeterie",
+    brand: "Kawaii Studio",
+    rating: 4.9,
+    reviewsCount: 1120,
+    recommendation: "Les stylos mignons qui donnent envie d'écrire tous les jours !",
+    quote: "Les stylos mignons qui donnent envie d'écrire tous les jours !",
+    originalPrice: "12,99 €",
+    discountedPrice: "9,99 €",
+    price: "9,99 €",
+    affiliateUrl: "https://amzn.to/3Sk7PVp",
+    affiliateLink: "https://amzn.to/3Sk7PVp",
+    imageUrl: "/images/amazon_partner/stylo_kawaii.jpg",
+    badge: "🌸 Trop Mignon"
   },
   {
-    id: "diffuseur-brume-gold",
-    title: "Diffuseur d'Huiles Essentielles Design & Silencieux",
-    category: "🔥 Les Incontournables",
-    brand: "Aroma Zen",
-    imageUrl: "/images/lamp.jpg",
-    recommendation: "Mon rituel détente du soir avec de l'huile de lavande. Objet de décoration magnifique et brume ultra légère.",
-    originalPrice: "65,00 €",
-    discountedPrice: "45,50 €",
-    promoCode: "ANNEZEN30",
-    discountPercentage: "-30%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.85,
-    reviewsCount: 410,
-    badgeText: "Pépite Confort"
+    id: "trieur-a4",
+    title: "Trieur & Organiseur A4",
+    category: "Organisation & Papeterie",
+    brand: "Office Pro",
+    rating: 4.6,
+    reviewsCount: 430,
+    recommendation: "Le sauveur pour trier tous les papiers et garder un bureau propre.",
+    quote: "Le sauveur pour trier tous les papiers et garder un bureau propre.",
+    originalPrice: "18,99 €",
+    price: "18,99 €",
+    affiliateUrl: "https://amzn.to/4z0qRkl",
+    affiliateLink: "https://amzn.to/4z0qRkl",
+    imageUrl: "/images/amazon_partner/trieur_a4.jpg"
   },
   {
-    id: "coffret-pinceaux-velours",
-    title: "Coffret 10 Pinceaux Maquillage Soie Synthétique",
-    category: "🎁 Bons Plans",
-    brand: "Velvet Studio",
-    imageUrl: "/images/bag.jpg",
-    recommendation: "Qualité professionnelle à prix tout doux avec mon code exclusif. Une douceur inégalée pour le teint.",
-    originalPrice: "58,00 €",
-    discountedPrice: "34,80 €",
-    promoCode: "ANNEBRUSH40",
-    discountPercentage: "-40%",
-    verified: true,
-    affiliateUrl: "#",
-    rating: 4.91,
-    reviewsCount: 1180,
-    badgeText: "Offre Exclusivité"
+    id: "livre-theatre",
+    title: "Livre - Cours de théâtre pour tous",
+    category: "Incontournables",
+    brand: "Éditions Théâtre",
+    rating: 4.9,
+    reviewsCount: 980,
+    recommendation: "Un super livre pour développer sa prise de parole et s'amuser !",
+    quote: "Un super livre pour développer sa prise de parole et s'amuser !",
+    originalPrice: "22,00 €",
+    price: "22,00 €",
+    affiliateUrl: "https://amzn.to/4fO3jGk",
+    affiliateLink: "https://amzn.to/4fO3jGk",
+    imageUrl: "/images/amazon_partner/livre_theatre_.jpg",
+    badge: "📚 Recommandation"
   }
 ];
+
+export const productsData = PRODUCTS_DATA;

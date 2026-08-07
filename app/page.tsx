@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { MediaKitHeader } from '@/components/MediaKitHeader';
 import { MediaKitHero } from '@/components/MediaKitHero';
+import { CertifiedMetricsCockpit } from '@/components/CertifiedMetricsCockpit';
+import { CampaignROISimulator } from '@/components/CampaignROISimulator';
 import { AboutSection } from '@/components/AboutSection';
 import { AudienceSection } from '@/components/AudienceSection';
 import { ServicesSection } from '@/components/ServicesSection';
@@ -19,12 +21,18 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#FAF7F2] font-sans antialiased text-[#1A1A1A]">
+    <main className="min-h-screen flex flex-col bg-[#181A1D] font-sans antialiased text-[#F0E5D8] overflow-x-hidden">
       {/* Press Deck Header */}
       <MediaKitHeader />
 
       {/* Hero Cover Presentation Deck */}
       <MediaKitHero />
+
+      {/* Certified Metrics Cockpit */}
+      <CertifiedMetricsCockpit />
+
+      {/* Interactive Campaign ROI Simulator */}
+      <CampaignROISimulator />
 
       {/* About & Creator Positioning */}
       <AboutSection />

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Sparkles, Video, Smartphone, Crown, Zap, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Video, Crown, ShieldCheck, ArrowRight } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const ServicesSection: React.FC = () => {
@@ -13,99 +13,99 @@ export const ServicesSection: React.FC = () => {
     }
   };
 
-  const getServiceIcon = (id: string) => {
-    switch (id) {
-      case 'sketch-dedie': return <Video className="w-6 h-6 text-[#C58B5C]" />;
-      case 'pack-story-coulisses': return <Smartphone className="w-6 h-6 text-[#C58B5C]" />;
-      case 'ambassadrice-marque': return <Crown className="w-6 h-6 text-[#C58B5C]" />;
-      case 'spark-ads': return <Zap className="w-6 h-6 text-[#C58B5C]" />;
-      default: return <Sparkles className="w-6 h-6 text-[#C58B5C]" />;
-    }
-  };
-
   return (
-    <section id="services" className="py-16 px-4 sm:px-8 bg-white border-b border-[#EBE4DC]">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#FAF7F2] text-[#8C6239] border border-[#E8DCD1] mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#C58B5C]" />
-            <span>Offres & Dispositifs Marketing</span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#1A1A1A] mb-4">
-            Services & Formats de Collaboration
-          </h2>
-          <p className="text-base text-[#6E6763] leading-relaxed">
-            Des formats de contenu adaptés aux objectifs stratégiques des marques (Notoriété, Engagement, Conversion).
-          </p>
+    <section id="services" className="py-20 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15">
+      
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4">
+          <Video className="w-4 h-4 text-[#F0E5D8]" />
+          <span>Formats & Tarifs Partenariats</span>
         </div>
+        <h2 className="text-3xl sm:text-5xl font-bold font-serif text-[#F0E5D8] mb-4 leading-tight">
+          Offres de Collaboration 🤝
+        </h2>
+        <p className="text-xs sm:text-base text-[#9DA4B0] leading-relaxed">
+          Des formules adaptées aux objectifs de votre marque : de la notoriété immédiate à l'engagement long terme.
+        </p>
+      </div>
 
-        {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {MEDIA_KIT_DATA.services.map((service, idx) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className={`bg-[#FAF7F2] rounded-3xl p-6 border shadow-sm flex flex-col justify-between relative group hover:shadow-xl transition-all duration-300 ${
-                service.popular ? 'border-[#C58B5C] ring-2 ring-[#C58B5C]/20' : 'border-[#EBE4DC]'
+      {/* Pricing Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {MEDIA_KIT_DATA.services.map((service) => (
+          <motion.div
+            key={service.id}
+            whileHover={{ y: -6 }}
+            className={`rounded-3xl p-8 sm:p-10 border transition-all flex flex-col justify-between relative shadow-2xl ${
+              service.popular
+                ? 'bg-[#23272C] border-[#F0E5D8] ring-1 ring-[#F0E5D8]/40'
+                : 'bg-[#181A1D] border-white/15'
+            }`}
+          >
+            {/* Top Popular Badge */}
+            {service.badge && (
+              <div className="absolute -top-3.5 left-8 bg-[#F0E5D8] text-[#181A1D] text-[11px] font-mono font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+                {service.badge}
+              </div>
+            )}
+
+            <div>
+              <div className="text-xs font-mono text-[#9DA4B0] uppercase font-bold mb-1">
+                {service.subtitle}
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3 leading-snug">
+                {service.title}
+              </h3>
+
+              <p className="text-xs sm:text-sm text-[#9DA4B0] leading-relaxed mb-6">
+                {service.description}
+              </p>
+
+              {/* Price Tag */}
+              <div className="bg-[#181A1D] p-4 rounded-2xl border border-white/10 mb-6 flex items-baseline justify-between">
+                <span className="text-xs font-mono text-[#9DA4B0] uppercase font-bold">Investissement :</span>
+                <div className="text-2xl sm:text-3xl font-serif font-bold text-[#F0E5D8]">
+                  {service.startingRate}
+                </div>
+              </div>
+
+              {/* Deliverables Checklist */}
+              <div className="space-y-3 mb-8">
+                <div className="text-xs font-mono font-bold text-[#F0E5D8] uppercase tracking-wider">
+                  Livrables & Garanties :
+                </div>
+                {service.deliverables.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5 text-xs text-[#9DA4B0] leading-relaxed">
+                    <Check className="w-4 h-4 text-[#10B981] shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Action Trigger */}
+            <button
+              onClick={scrollToContact}
+              className={`w-full text-xs sm:text-sm py-4 px-6 rounded-2xl flex items-center justify-center gap-2 font-bold transition-all shadow-xl ${
+                service.popular
+                  ? 'btn-primary'
+                  : 'btn-secondary'
               }`}
             >
-              {service.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#1A1A1A] text-[#FAF7F2] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
-                  Format Populaire
-                </div>
-              )}
+              <span>Demander un Devis pour ce Format</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
 
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-sm border border-[#EBE4DC]">
-                  {getServiceIcon(service.id)}
-                </div>
-
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-1 font-serif">
-                  {service.title}
-                </h3>
-                <p className="text-xs font-bold text-[#C58B5C] mb-4 uppercase tracking-wider">{service.subtitle}</p>
-                
-                <p className="text-xs text-[#6E6763] mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Deliverables List */}
-                <div className="space-y-2.5 mb-8">
-                  <div className="text-[11px] font-bold uppercase tracking-widest text-[#1A1A1A]">Livrables inclus :</div>
-                  {service.deliverables.map((item, dIdx) => (
-                    <div key={dIdx} className="flex items-start gap-2 text-xs text-[#1A1A1A] font-medium">
-                      <div className="w-3.5 h-3.5 rounded-full bg-[#10B981]/15 text-[#10B981] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-2.5 h-2.5" />
-                      </div>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div className="bg-white p-3 rounded-2xl border border-[#EBE4DC] text-center mb-4">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-[#6E6763]">Tarification</div>
-                  <div className="text-sm font-bold font-serif text-[#1A1A1A]">{service.startingRate}</div>
-                </div>
-
-                <button
-                  onClick={scrollToContact}
-                  className="w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-2xl text-xs hover:bg-[#C58B5C] transition-colors flex items-center justify-center gap-2"
-                >
-                  <span>Demander un devis</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
+          </motion.div>
+        ))}
       </div>
+
+      <div className="mt-12 text-center text-xs text-[#9DA4B0] flex items-center justify-center gap-2">
+        <ShieldCheck className="w-4 h-4 text-[#10B981]" />
+        <span>Toutes nos collaborations sont encadrées par contrat professionnel et respectent scrupuleusement la loi ARPP.</span>
+      </div>
+
     </section>
   );
 };
