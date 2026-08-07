@@ -34,37 +34,37 @@ export const MediaKitHeader: React.FC = () => {
               <span className="truncate">{MEDIA_KIT_DATA.name}</span>
               <ShieldCheck className="w-3.5 h-3.5 text-[#10B981] shrink-0" />
             </div>
-            <div className="text-[9px] sm:text-xs font-mono text-[#9DA4B0] truncate hidden xs:block">
+            <div className="text-[9px] sm:text-xs font-mono text-[#9DA4B0] truncate hidden sm:block">
               {MEDIA_KIT_DATA.handle}
             </div>
           </div>
         </div>
 
         {/* Action CTAs */}
-        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           
-          {/* Link to Official Site annecaroaction.fr (Desktop/Tablet) */}
+          {/* Link to Official Site annecaroaction.fr (Desktop/Tablet ONLY) */}
           <a
             href={MEDIA_KIT_DATA.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-xs py-2 px-3 hidden lg:inline-flex items-center gap-1.5 shadow-sm"
+            className="btn-secondary text-xs py-2 px-3.5 header-btn-desktop-only items-center gap-1.5 shadow-sm"
           >
             <Globe className="w-3.5 h-3.5 text-[#10B981]" />
             <span>Site Officiel</span>
           </a>
 
-          {/* PDF Download Button (Hidden on tiny mobile, shown sm+) */}
+          {/* PDF Download Button (Desktop/Tablet ONLY) */}
           <button
             onClick={handleDownloadPDF}
-            className="btn-secondary text-[11px] sm:text-xs py-2 px-2.5 sm:px-4 hidden sm:inline-flex items-center gap-1.5 shadow-sm print-keep"
+            className="btn-secondary text-xs py-2 px-3.5 header-btn-desktop-only items-center gap-1.5 shadow-sm print-keep"
             title="Télécharger le Dossier de Presse en PDF"
           >
             <Download className="w-3.5 h-3.5 text-[#F0E5D8]" />
             <span>PDF HD</span>
           </button>
 
-          {/* Direct Brand Inquiry Button */}
+          {/* Direct Brand Inquiry Button (Always Visible, Compact on Mobile) */}
           <button
             onClick={scrollToContact}
             className="btn-primary text-xs py-2 px-3.5 sm:px-5 inline-flex items-center gap-1.5 shadow-lg print-keep shrink-0 whitespace-nowrap"
