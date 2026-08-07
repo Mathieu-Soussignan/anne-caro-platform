@@ -130,11 +130,11 @@ h1, h2, h3, .font-serif {
   scrollbar-width: none;
 }
 
-/* Dedicated Executive PDF Print Styles */
+/* Dedicated Executive PDF Print Styles - Full Readable Size */
 @media print {
   @page {
     size: A4 portrait;
-    margin: 6mm;
+    margin: 8mm;
   }
 
   html, body {
@@ -142,7 +142,7 @@ h1, h2, h3, .font-serif {
     color: #F0E5D8 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    font-size: 10px !important;
+    font-size: 14px !important;
   }
 
   header, footer, nav, .no-print, button, .btn-primary, .btn-secondary {
@@ -150,8 +150,8 @@ h1, h2, h3, .font-serif {
   }
 
   section {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
     border-color: rgba(240, 229, 216, 0.15) !important;
     break-inside: avoid !important;
   }
@@ -161,24 +161,24 @@ h1, h2, h3, .font-serif {
     print-color-adjust: exact !important;
   }
 
-  /* Force 3-column layout in print mode for video cases ONLY */
+  /* Force 3-column layout in print mode for video cases */
   .skit-grid-print {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 0.75rem !important;
+    gap: 1.5rem !important;
   }
 
   .skit-phone-print {
-    height: 220px !important;
-    width: auto !important;
+    height: 380px !important;
+    width: 100% !important;
     aspect-ratio: 9/16 !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
-  /* Preserve Hero vertical phone mockup */
+  /* Hero phone mockup print rule */
   .hero-phone-print {
-    width: 180px !important;
-    height: 320px !important;
+    width: 280px !important;
+    height: 480px !important;
     aspect-ratio: 9/16 !important;
     margin: 0 auto !important;
   }
