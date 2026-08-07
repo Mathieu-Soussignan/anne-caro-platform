@@ -142,7 +142,7 @@ h1, h2, h3, .font-serif {
     color: #F0E5D8 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
 
   header, footer, nav, .no-print, button, .btn-primary, .btn-secondary {
@@ -150,22 +150,26 @@ h1, h2, h3, .font-serif {
   }
 
   section {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
     border-color: rgba(240, 229, 216, 0.2) !important;
     break-inside: avoid !important;
   }
 
-  div {
+  div, article, figure {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    break-inside: avoid !important;
   }
 
   img {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    max-height: 250px !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
     object-fit: cover !important;
+    object-position: top !important;
   }
 
   .grid {
