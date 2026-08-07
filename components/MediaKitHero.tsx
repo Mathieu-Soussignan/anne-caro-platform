@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Sparkles, ArrowRight, Eye, Heart, MessageCircle, Music, Play } from 'lucide-react';
+import { ShieldCheck, Sparkles, ArrowRight, Eye, Heart, MessageCircle, Music } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const MediaKitHero: React.FC = () => {
@@ -21,7 +21,7 @@ export const MediaKitHero: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-12 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-x-hidden w-full">
+    <section className="relative pt-12 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-x-hidden w-full break-inside-avoid">
       
       {/* Background Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#F0E5D8]/10 blur-[120px] rounded-full pointer-events-none" />
@@ -93,7 +93,7 @@ export const MediaKitHero: React.FC = () => {
 
         {/* Right Column: TikTok Phone Player Frame (God Tier Visual Standard) */}
         <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-64 sm:w-80 aspect-[9/16] rounded-[36px] bg-[#181A1D] border-4 border-[#353B43] shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
+          <div className="relative w-64 sm:w-80 aspect-[9/16] hero-phone-print rounded-[36px] bg-[#181A1D] border-4 border-[#353B43] shadow-[0_25px_60px_rgba(0,0,0,0.9)] overflow-hidden group">
             
             {/* Real Photo with Object Cover Top framing */}
             <img

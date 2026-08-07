@@ -23,8 +23,8 @@ export const BrandReferencesSection: React.FC = () => {
         </p>
       </div>
 
-      {/* TikTok Smartphone Player Grid (Force 3-column on print) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-6 sm:gap-10">
+      {/* TikTok Smartphone Player Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 skit-grid-print gap-6 sm:gap-10">
         {MEDIA_KIT_DATA.skits.map((skit) => (
           <motion.div
             key={skit.id}
@@ -33,7 +33,7 @@ export const BrandReferencesSection: React.FC = () => {
           >
             <div>
               {/* Realistic TikTok Smartphone Frame with Print max-height constraint */}
-              <div className="relative w-full aspect-[9/16] print:max-h-[220px] rounded-[24px] bg-[#181A1D] border-2 border-[#353B43] shadow-2xl overflow-hidden mb-4">
+              <div className="relative w-full aspect-[9/16] skit-phone-print rounded-[24px] bg-[#181A1D] border-2 border-[#353B43] shadow-2xl overflow-hidden mb-4">
                 
                 {/* Photo with Object Cover Top framing */}
                 <img

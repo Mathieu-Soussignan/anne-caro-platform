@@ -161,19 +161,26 @@ h1, h2, h3, .font-serif {
     print-color-adjust: exact !important;
   }
 
-  /* Force 3-column layout in print mode for video cases */
-  .grid-cols-1.md\:grid-cols-3,
-  .grid-cols-1.sm\:grid-cols-3 {
+  /* Force 3-column layout in print mode for video cases ONLY */
+  .skit-grid-print {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 0.75rem !important;
   }
 
-  .aspect-\[9\/16\] {
+  .skit-phone-print {
+    height: 220px !important;
+    width: auto !important;
     aspect-ratio: 9/16 !important;
-    max-height: 250px !important;
-    width: 100% !important;
     margin-bottom: 0.5rem !important;
+  }
+
+  /* Preserve Hero vertical phone mockup */
+  .hero-phone-print {
+    width: 180px !important;
+    height: 320px !important;
+    aspect-ratio: 9/16 !important;
+    margin: 0 auto !important;
   }
 
   img {
