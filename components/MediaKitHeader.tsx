@@ -41,20 +41,21 @@ export const MediaKitHeader: React.FC = () => {
         </div>
 
         {/* Action CTAs */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           
-          {/* Link to Official Site annecaroaction.fr (Desktop/Tablet ONLY) */}
+          {/* Link to Official Site annecaroaction.fr */}
           <a
             href={MEDIA_KIT_DATA.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-xs py-2 px-3.5 header-btn-desktop-only items-center gap-1.5 shadow-sm"
+            className="btn-secondary text-xs py-2 px-2.5 sm:px-4 inline-flex items-center gap-1.5 shadow-sm"
+            title="Visiter le site officiel annecaroaction.fr"
           >
             <Globe className="w-3.5 h-3.5 text-[#10B981]" />
-            <span>Site Officiel</span>
+            <span className="hidden sm:inline">Site Officiel</span>
           </a>
 
-          {/* PDF Download Button (Desktop/Tablet ONLY) */}
+          {/* PDF Download Button (Desktop/Tablet) */}
           <button
             onClick={handleDownloadPDF}
             className="btn-secondary text-xs py-2 px-3.5 header-btn-desktop-only items-center gap-1.5 shadow-sm print-keep"
@@ -64,7 +65,7 @@ export const MediaKitHeader: React.FC = () => {
             <span>PDF HD</span>
           </button>
 
-          {/* Direct Brand Inquiry Button (Always Visible, Compact on Mobile) */}
+          {/* Direct Brand Inquiry Button */}
           <button
             onClick={scrollToContact}
             className="btn-primary text-xs py-2 px-3.5 sm:px-5 inline-flex items-center gap-1.5 shadow-lg print-keep shrink-0 whitespace-nowrap"

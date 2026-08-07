@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Sparkles, ArrowRight, Eye, Heart, MessageCircle, Music } from 'lucide-react';
+import { ShieldCheck, Sparkles, ArrowRight, Eye, Heart, MessageCircle, Music, Globe } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const MediaKitHero: React.FC = () => {
@@ -31,10 +31,22 @@ export const MediaKitHero: React.FC = () => {
         {/* Left Column: B2B Brand Pitch */}
         <div className="lg:col-span-7 space-y-6 sm:space-y-8">
           
-          {/* Verified Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 shadow-md">
-            <ShieldCheck className="w-4 h-4 text-[#10B981]" />
-            <span>{MEDIA_KIT_DATA.verifiedBadge}</span>
+          {/* Badges Strip (TikTok Verified + Official Website Link) */}
+          <div className="flex flex-wrap items-center gap-2.5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 shadow-md">
+              <ShieldCheck className="w-4 h-4 text-[#10B981]" />
+              <span>{MEDIA_KIT_DATA.verifiedBadge}</span>
+            </div>
+
+            <a
+              href={MEDIA_KIT_DATA.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-bold bg-[#10B981]/10 text-[#10B981] border border-[#10B981]/30 hover:bg-[#10B981]/20 transition-all shadow-sm"
+            >
+              <Globe className="w-3.5 h-3.5 text-[#10B981]" />
+              <span>annecaroaction.fr ↗</span>
+            </a>
           </div>
 
           {/* Main Headline */}
