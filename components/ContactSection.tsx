@@ -21,7 +21,22 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
     if (!brandName || !contactEmail) return;
 
     setSubmitted(true);
-    onShowToast(`Demande de partenariat envoyée pour ${brandName} ! Équipe réactive sous 24h.`);
+    onShowToast(`Demande de partenariat transmise à Anne-Caro pour ${brandName} ! Réponse sous 24h.`);
+
+    // Mailto fallback to ensure direct delivery to Anne-Caro's email
+    const subject = encodeURIComponent(`[Demande Partenariat Media Kit] ${brandName}`);
+    const body = encodeURIComponent(
+      `Bonjour Anne-Caro,\n\n` +
+      `Nous souhaitons échanger avec vous pour une opportunité de partenariat.\n\n` +
+      `• Marque / Agence : ${brandName}\n` +
+      `• Email de contact : ${contactEmail}\n` +
+      `• Format Envisagé : ${selectedFormat}\n` +
+      `• Budget Prévisionnel : ${budgetRange}\n\n` +
+      `Détails du projet :\n${projectMessage}\n\n` +
+      `Cordialement,\n${brandName}`
+    );
+
+    window.location.href = `mailto:annecarolinehubertpro13@gmail.com?subject=${subject}&body=${body}`;
     
     setTimeout(() => {
       setBrandName('');
@@ -81,8 +96,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
               <Mail className="w-4 h-4 text-[#F0E5D8] shrink-0" />
               <div className="overflow-hidden">
                 <div className="text-[#9DA4B0] text-[10px] uppercase font-bold">Email Direct :</div>
-                <a href={`mailto:${MEDIA_KIT_DATA.email}`} className="text-white font-bold hover:underline truncate block">
-                  {MEDIA_KIT_DATA.email}
+                <a href="mailto:annecarolinehubertpro13@gmail.com" className="text-white font-bold hover:underline truncate block">
+                  annecarolinehubertpro13@gmail.com
                 </a>
               </div>
             </div>

@@ -30,7 +30,7 @@ export const MEDIA_KIT_DATA = {
   subTitle: "La référence francophone des sketchs de bureau, réunions RH et quiproquos du quotidien.",
   tagline: "Des situations du quotidien... parfois gênantes, parfois vraies. T'aurais réagi comment ?",
   quote: "Mon engagement : transformer votre message de marque en une saga humoristique virale que la communauté adore et repartage.",
-  email: "contact@annecaroaction.fr",
+  email: "annecarolinehubertpro13@gmail.com",
   location: "Paris, France • Rayonnement France, Belgique, Suisse",
   avatarUrl: "/images/Anne-caro-logo.jpeg",
   portraitStory: "/images/Anne-caro-1.JPG",
