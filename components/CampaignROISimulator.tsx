@@ -61,13 +61,13 @@ export const CampaignROISimulator: React.FC = () => {
   };
 
   return (
-    <section id="simulator" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
+    <section id="simulator" className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#F0E5D8]/15 overflow-x-hidden w-full">
       
-      {/* Header without AI emojis */}
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-2">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-[0.2em] bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 whitespace-nowrap">
-          <Calculator className="w-4 h-4 text-[#F0E5D8]" />
-          <span>Calculateur de Portée & ROI de Campagne</span>
+      {/* Header with Responsive Badge Pill */}
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 px-2">
+        <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider bg-[#23272C] text-[#F0E5D8] border border-[#F0E5D8]/20 mb-4 max-w-full text-center">
+          <Calculator className="w-3.5 h-3.5 text-[#F0E5D8] shrink-0" />
+          <span className="truncate">Calculateur de Portée & ROI</span>
         </div>
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold font-serif text-[#F0E5D8] mb-3 leading-tight break-words max-w-full">
           Simulateur de Performances Marque
@@ -78,11 +78,11 @@ export const CampaignROISimulator: React.FC = () => {
       </div>
 
       {/* Simulator Interactive Terminal */}
-      <div className="bg-[#23272C] rounded-3xl border border-[#F0E5D8]/20 p-6 sm:p-12 shadow-2xl max-w-full">
+      <div className="bg-[#23272C] rounded-3xl border border-[#F0E5D8]/20 p-5 sm:p-12 shadow-2xl max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Column: Format & Multiplier Selection */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             
             {/* Step 1: Format Selector */}
             <div>
@@ -142,9 +142,9 @@ export const CampaignROISimulator: React.FC = () => {
                 className="w-full accent-[#F0E5D8] bg-[#181A1D] h-2.5 rounded-lg cursor-pointer"
               />
               <div className="flex justify-between text-[10px] font-mono text-[#9DA4B0] mt-1">
-                <span>1 Vidéo (Ponctuel)</span>
-                <span>3 Vidéos (Saga)</span>
-                <span>5 Vidéos (Partenariat Annuel)</span>
+                <span>1 Vidéo</span>
+                <span>3 Vidéos</span>
+                <span>5 Vidéos</span>
               </div>
             </div>
 
@@ -152,13 +152,13 @@ export const CampaignROISimulator: React.FC = () => {
 
           {/* Right Column: Projected Metrics Results & Direct Quote Trigger */}
           <div className="lg:col-span-5">
-            <div className="bg-[#181A1D] rounded-3xl p-6 sm:p-8 border border-[#F0E5D8]/30 shadow-2xl space-y-6">
+            <div className="bg-[#181A1D] rounded-3xl p-5 sm:p-8 border border-[#F0E5D8]/30 shadow-2xl space-y-6">
               
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <span className="text-xs font-mono font-bold text-[#9DA4B0] uppercase">
                   Projections Campagne
                 </span>
-                <span className="text-xs font-mono font-bold text-[#10B981] bg-[#10B981]/10 px-3 py-1 rounded-full border border-[#10B981]/20 flex items-center gap-1">
+                <span className="text-[10px] sm:text-xs font-mono font-bold text-[#10B981] bg-[#10B981]/10 px-2.5 py-1 rounded-full border border-[#10B981]/20 flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 text-[#10B981]" />
                   Estimations Certifiées
                 </span>
