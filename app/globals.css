@@ -134,7 +134,7 @@ h1, h2, h3, .font-serif {
 @media print {
   @page {
     size: A4 portrait;
-    margin: 8mm;
+    margin: 6mm;
   }
 
   html, body {
@@ -142,7 +142,7 @@ h1, h2, h3, .font-serif {
     color: #F0E5D8 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
 
   header, footer, nav, .no-print, button, .btn-primary, .btn-secondary {
@@ -150,16 +150,30 @@ h1, h2, h3, .font-serif {
   }
 
   section {
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important;
-    border-color: rgba(240, 229, 216, 0.2) !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    border-color: rgba(240, 229, 216, 0.15) !important;
     break-inside: avoid !important;
   }
 
   div, article, figure {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    break-inside: avoid !important;
+  }
+
+  /* Force 3-column layout in print mode for video cases */
+  .grid-cols-1.md\:grid-cols-3,
+  .grid-cols-1.sm\:grid-cols-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  .aspect-\[9\/16\] {
+    aspect-ratio: 9/16 !important;
+    max-height: 250px !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
   }
 
   img {
@@ -167,12 +181,7 @@ h1, h2, h3, .font-serif {
     print-color-adjust: exact !important;
     width: 100% !important;
     height: 100% !important;
-    max-height: none !important;
     object-fit: cover !important;
     object-position: top !important;
-  }
-
-  .grid {
-    display: grid !important;
   }
 }
