@@ -13,6 +13,7 @@ import { MagicScrollPortfolio } from '@/components/MagicScrollPortfolio';
 import { ContactSection } from '@/components/ContactSection';
 import { MediaKitFooter } from '@/components/MediaKitFooter';
 import { Toast } from '@/components/Toast';
+import { MagicScrollTopButton } from '@/components/MagicScrollTopButton';
 
 export default function Home() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -55,6 +56,9 @@ export default function Home() {
 
       {/* Press Footer */}
       <MediaKitFooter />
+
+      {/* Floating Magic Scroll-to-Top Button */}
+      <MagicScrollTopButton />
 
       {/* Floating Toast Alert */}
       <Toast message={toastMessage} onClose={() => setToastMessage(null)} />
