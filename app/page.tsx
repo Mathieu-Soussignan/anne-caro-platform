@@ -9,6 +9,7 @@ import { AboutSection } from '@/components/AboutSection';
 import { AudienceSection } from '@/components/AudienceSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { BrandReferencesSection } from '@/components/BrandReferencesSection';
+import { MagicScrollPortfolio } from '@/components/MagicScrollPortfolio';
 import { ContactSection } from '@/components/ContactSection';
 import { MediaKitFooter } from '@/components/MediaKitFooter';
 import { Toast } from '@/components/Toast';
@@ -45,6 +46,9 @@ export default function Home() {
 
       {/* Brand Partnerships & Case Studies */}
       <BrandReferencesSection />
+
+      {/* Magic Scroll Interactive Portfolio */}
+      <MagicScrollPortfolio />
 
       {/* Brand Inquiries & Contact Form */}
       <ContactSection onShowToast={handleShowToast} />
