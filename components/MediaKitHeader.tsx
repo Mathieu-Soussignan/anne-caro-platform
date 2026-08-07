@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Download, Sparkles, Send, ShieldCheck } from 'lucide-react';
+import { Download, Send, ShieldCheck } from 'lucide-react';
 import { MEDIA_KIT_DATA } from '@/data/creatorData';
 
 export const MediaKitHeader: React.FC = () => {
   const handleDownloadPDF = () => {
+    // Print window with exact Executive PDF styling
     window.print();
   };
 
@@ -17,7 +18,7 @@ export const MediaKitHeader: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#181A1D]/90 backdrop-blur-md border-b border-[#F0E5D8]/15 px-4 sm:px-8 py-3.5 transition-all">
+    <header className="sticky top-0 z-40 bg-[#181A1D]/90 backdrop-blur-md border-b border-[#F0E5D8]/15 px-4 sm:px-8 py-3.5 transition-all no-print">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         
         {/* Brand Logo & Name */}
@@ -46,17 +47,17 @@ export const MediaKitHeader: React.FC = () => {
           {/* PDF Download Button */}
           <button
             onClick={handleDownloadPDF}
-            className="btn-secondary text-xs py-2 px-3.5 sm:px-4 hidden sm:inline-flex items-center gap-1.5 shadow-sm"
+            className="btn-secondary text-xs py-2 px-3.5 sm:px-4 hidden sm:inline-flex items-center gap-1.5 shadow-sm print-keep"
             title="Télécharger le Dossier de Presse en PDF"
           >
             <Download className="w-3.5 h-3.5 text-[#F0E5D8]" />
-            <span>PDF HD</span>
+            <span>PDF Executive HD</span>
           </button>
 
           {/* Direct Brand Inquiry Button */}
           <button
             onClick={scrollToContact}
-            className="btn-primary text-xs py-2 px-4 sm:px-5 inline-flex items-center gap-1.5 shadow-lg"
+            className="btn-primary text-xs py-2 px-4 sm:px-5 inline-flex items-center gap-1.5 shadow-lg print-keep"
           >
             <Send className="w-3.5 h-3.5 text-[#181A1D]" />
             <span>Demander un Devis</span>

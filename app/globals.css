@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #FAF8F5;
-  --bg-secondary: #F4ECE4;
-  --bg-card: #FFFFFF;
-  --text-main: #2C2623;
-  --text-muted: #6E6763;
-  --accent-gold: #D4A373;
-  --accent-terracotta: #C58B5C;
-  --accent-dark: #1E1A18;
-  --border-light: #EBE4DC;
-  --font-heading: 'Playfair Display', serif;
+  --bg-primary: #181A1D;
+  --bg-card: #23272C;
+  --text-main: #F0E5D8;
+  --text-muted: #9DA4B0;
+  --accent-gold: #F0E5D8;
+  --accent-green: #10B981;
+  --font-heading: 'Italiana', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -35,89 +32,62 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #181A1D;
 }
 ::-webkit-scrollbar-thumb {
-  background: #EBE4DC;
+  background: #23272C;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4A373;
+  background: #F0E5D8;
 }
 
 h1, h2, h3, .font-serif {
   font-family: var(--font-heading);
-  letter-spacing: -0.02em;
-}
-
-/* Glassmorphism & Micro Utilities */
-.glass-header {
-  background: rgba(250, 248, 245, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(235, 228, 220, 0.8);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid #EBE4DC;
-}
-
-.badge-gold {
-  background: linear-gradient(135deg, #F4ECE4 0%, #E6D5C3 100%);
-  color: #6B4E35;
-  border: 1px solid rgba(212, 163, 115, 0.3);
-}
-
-.badge-terracotta {
-  background: rgba(197, 139, 92, 0.12);
-  color: #C58B5C;
-  border: 1px solid rgba(197, 139, 92, 0.25);
+  letter-spacing: -0.01em;
 }
 
 .btn-primary {
-  background: #2C2623;
-  color: #FFFFFF;
+  background: #F0E5D8;
+  color: #181A1D;
   padding: 14px 28px;
   border-radius: 9999px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid #2C2623;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid #F0E5D8;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(30, 26, 24, 0.15);
+  box-shadow: 0 10px 30px -5px rgba(240, 229, 216, 0.25);
 }
 
 .btn-primary:hover {
-  background: #C58B5C;
-  border-color: #C58B5C;
+  background: #FFFFFF;
+  border-color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(197, 139, 92, 0.3);
+  box-shadow: 0 15px 35px -5px rgba(240, 229, 216, 0.4);
 }
 
 .btn-secondary {
-  background: #FFFFFF;
-  color: #2C2623;
+  background: #23272C;
+  color: #F0E5D8;
   padding: 14px 28px;
   border-radius: 9999px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid #EBE4DC;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(240, 229, 216, 0.2);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px -5px rgba(44, 38, 35, 0.05);
 }
 
 .btn-secondary:hover {
-  background: #F4ECE4;
-  border-color: #D4A373;
+  background: #2D3238;
+  border-color: rgba(240, 229, 216, 0.5);
   transform: translateY(-2px);
 }
 
@@ -158,4 +128,47 @@ h1, h2, h3, .font-serif {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Dedicated Executive PDF Print Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  html, body {
+    background-color: #181A1D !important;
+    color: #F0E5D8 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-size: 12px !important;
+  }
+
+  header, footer, nav, .no-print, button, .btn-primary, .btn-secondary {
+    display: none !important;
+  }
+
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    border-color: rgba(240, 229, 216, 0.2) !important;
+    break-inside: avoid !important;
+  }
+
+  div {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    max-height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  .grid {
+    display: grid !important;
+  }
 }
